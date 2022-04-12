@@ -11,6 +11,11 @@ en:
       home: Home
       exams: Exams
       login: Log in
+      Users: "Users"
+      Account: "Account"
+      Profile: "Profile"
+      Settings: "Settings"
+      Logout: "Logout"
   static_pages:
     home:
       title: Home
@@ -31,3 +36,18 @@ en:
     error:
       title: "The form contains"
       error: "error"
+  sessions:
+    title: "Log in"
+    h1: "Log in"
+    password: "Password"
+    login: "Login"
+    new_user: "New User?"
+    signup: "Signup"
+    remember: "Remember me"
+    email: "Email address"
+    password: "Password"
+    or: "OR"
+    facebook: "Sign in with Facebook"
+    google: "Sign in with Google"
+  flash:
+    invalid: "Invalid email/password combination"

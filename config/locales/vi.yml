@@ -1,23 +1,28 @@
 vi:
-  exam_online: Exam Online
+  exam_online: "Exam Online"
   controller:
     user:
       flash_success: "Chào mừng đến với Exam Online!"
   layouts:
     footer:
-      english: English
-      vietnamese: Việt Nam
+      english: "English"
+      vietnamese: "Việt Nam"
     header:
-      home: Trang chủ
-      exams: Bài kiểm tra
-      login: Đăng nhập
+      home: "Trang chủ"
+      exams: "Bài kiểm tra"
+      login: "Đăng nhập"
+      Users: "Người Dùng"
+      Account: "Tài Khoản"
+      Profile: "Thông Tin Cá Nhân"
+      Settings: "Cài Đặt"
+      Logout: "Đăng Xuất"
   static_pages:
     home:
-      title: Trang chủ
-      header: Chào mừng đến với Exam Online
-      content: Phát triển kỹ năng lập trình của bạn bằng những bài kiểm tra
-        miễn phí và chất lượng
-      signup: Hãy đăng ký
+      title: "Trang chủ"
+      header: "Chào mừng đến với Exam Online"
+      content: "Phát triển kỹ năng lập trình của bạn bằng những bài kiểm tra
+        miễn phí và chất lượng"
+      signup: "Hãy đăng ký"
   users:
     new:
       title: "Đăng Ký"
@@ -32,3 +37,17 @@ vi:
     error:
       title: "Biểu mẫu chứa"
       error: "lỗi"
+  sessions:
+    title: "Đăng Nhập"
+    h1: "Đăng Nhập"
+    login: "Đăng Nhập"
+    new_user: "Người dùng mới?"
+    signup: "Đăng ký"
+    remember: "Ghi nhớ mật khẩu"
+    email: "địa chỉ email"
+    password: "Mật Khẩu"
+    or: "Hoặc"
+    facebook: "Đăng nhập bằng Facebook"
+    google: "Đăng nhập bằng  Google"
+  flash:
+    invalid: "Sai email hoặc mật khẩu"
