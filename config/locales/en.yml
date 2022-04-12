@@ -3,6 +3,11 @@ en:
   controller:
     user:
       flash_success: "Welcome to the Exam onlie"
+    admin:
+      create_exam_success: "Create Exam Success"
+      update_exam_success: "Update Exam Success"
+      update_exam_fail: "Update Exam Fail"
+      load_exam_fail: "Exam not found"
   layouts:
     footer:
       english: English
@@ -60,3 +65,29 @@ en:
     google: "Sign in with Google"
   flash:
     invalid: "Invalid email/password combination"
+  admin:
+    exams:
+      index:
+        name: "Test name"
+        score: "Pass Score"
+        time: "Exam Time"
+        func: "Function"
+        btn_new: "New"
+        h1_html: "All Exams"
+        title: "Exams"
+      exam:
+        btn_edit: "Edit"
+        btn_detail: "Detail"
+        btn_delete: "Delete"
+      new:
+        title: "Create Exam"
+        btn_new: "Create Exam"
+        h1_html: "Create Exam"
+      edit:
+        title: "Update Exam"
+        btn_new: "Save Exam"
+        h1_html: "Update Exam"
+      form:
+        name: "Name Exam"
+        time_limit: "Time Limit (minutes)"
+        pass_score: "Pass Score"

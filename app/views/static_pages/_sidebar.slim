@@ -1,13 +1,15 @@
 .col-lg-3
   - if logged_in? && current_user.admin?
-    h2.my-4= t(".admin_title")
-    .list-group
-      = link_to t(".admin_func1"), "#", class: "list-group-item"
-      = link_to t(".admin_func2"), "#", class: "list-group-item"
-      = link_to t(".admin_func3"), "#", class: "list-group-item"
-      = link_to t(".admin_func4"), "#", class: "list-group-item"
+      h2.my-4
+        = t(".admin_title")
+      .list-group
+        = link_to t(".admin_func1"), admin_exams_path, class: "button list-group-item"
+        = link_to t(".admin_func2"), "#", class: "button list-group-item"
+        = link_to t(".admin_func3"), "#", class: "list-group-item"
+        = link_to t(".admin_func4"), "#", class: "list-group-item"
   - else
-    h2.my-4= t(".user_title")
-    .list-group
-      = link_to t(".user_func1"), "#", class: "list-group-item"
-      = link_to t(".user_func2"), "#", class: "list-group-item"
+      h2.my-4
+        = t(".user_title")
+      .list-group
+        = link_to t(".user_func1"), "#", class: "list-group-item"
+        = link_to t(".user_func2"), "#", class: "list-group-item"

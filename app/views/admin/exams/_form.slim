@@ -1,0 +1,11 @@
+
+= form_for([:admin, @exam]) do |l|
+  fieldset
+    = render "shared/error_messages", object: l.object
+    = l.label :name, t(".name")
+    = l.text_field :name, class: "form-control"
+    = l.label :time_limit, t(".time_limit")
+    = l.select :time_limit, raw("<option selected='selected'>5</option><option>10</option><option>15</option><option>30</option><option>60</option>")
+    = l.label :pass_score, t(".pass_score")
+    = l.text_field :pass_score, class: "form-control"
+    = l.submit yield(:button_text), class: "btn btn-primary"

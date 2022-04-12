@@ -3,6 +3,11 @@ vi:
   controller:
     user:
       flash_success: "Chào mừng đến với Exam Online!"
+    admin:
+      create_exam_success: "Tạo đề thi thành công"
+      update_exam_success: "Cập nhật đề thi thành công"
+      update_exam_fail: "Cập nhật đề thi thất bại"
+      load_exam_fail: "Không tìm thấy đề thi"
   layouts:
     footer:
       english: "English"
@@ -60,3 +65,29 @@ vi:
     google: "Đăng nhập bằng  Google"
   flash:
     invalid: "Sai email hoặc mật khẩu"
+  admin:
+    exams:
+      index:
+        name: "Tên Bài Kiểm Tra"
+        score: "Điểm Vượt Qua"
+        time: "Thời Gian Làm Bài"
+        func: "Chức Năng"
+        btn_new: "Tạo Mới"
+        h1_html: "Tất cả các bài Kiểm Tra"
+        title: "Bài Kiểm Tra"
+      exam:
+        btn_edit: "Chỉnh Sửa"
+        btn_detail: "Chi Tiết"
+        btn_delete: "Xóa"
+      new:
+        title: "Tạo Bài Kiểm Tra"
+        btn_new: "Xác Nhận"
+        h1_html: "Tạo Bài Kiểm Tra"
+      edit:
+        title: "Cập nhật Bài Kiểm Tra"
+        btn_new: "Lưu Bài Kiểm Tra"
+        h1_html: "Cập nhật Bài Kiểm Tra"
+      form:
+        name: "Tên Bài Kiểm Tra"
+        time_limit: "Thời gian giới hạn (phút)"
+        pass_score: "Điểm vượt qua"
