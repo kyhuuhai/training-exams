@@ -1,7 +1,6 @@
 class Exam < ApplicationRecord
   has_many :user_exams, dependent: :destroy
-  has_many :exam_questions
-  has_many :questions, through: :exam_questions
+  has_many :questions, dependent: :destroy
 
   validates :name, presence: true,
                    length: { maximum: Settings.model.user.name_length_max }
@@ -11,7 +10,7 @@ class Exam < ApplicationRecord
                           presence: true
   validates :time_limit, presence: true
 
-  scope :exam_by_name, ->{order :name}
+  scope :order_by_name, ->{order :name}
 
   def add_question question
     questions << question

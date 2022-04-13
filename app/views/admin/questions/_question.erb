@@ -1,0 +1,8 @@
+<div class="center col-lg-12 view-question">
+  <div id = "question-form-<%=@exam.id%>" class = "create-question"></div>
+  <ul class = "question-ul">
+    <% @exam.questions.each do |question|%>
+      <li><%= question.content %></li>
+    <% end %>
+  </ul>
+</div>

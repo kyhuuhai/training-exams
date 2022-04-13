@@ -26,7 +26,6 @@ textarea {
     }
 }
 
-
 /* typography */
 
 h1,
@@ -58,7 +57,6 @@ p {
     line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
@@ -75,7 +73,6 @@ p {
         text-decoration: none;
     }
 }
-
 
 /* footer */
 
@@ -102,7 +99,6 @@ footer {
         }
     }
 }
-
 
 /* home */
 
@@ -174,7 +170,6 @@ footer {
     width: 88%;
     height: 112px;
 }
-
 
 /*Users-form-signup*/
 
@@ -361,4 +356,42 @@ input {
 
 .col-md-offset-3 {
     margin-left: 40%;
+}
+
+.view-question {
+    border: 1px solid rgb(230, 222, 222);
+    position: relative;
+    top: -156px;
+    width: 100%;
+}
+.view-question ul {
+    width: 100%;
+}
+
+.question-ul {
+    list-style-type: none;
+    counter-reset: css-counter 0;
+    float: left;
+    text-align: left;
+    width: 100%;
+}
+
+.question-ul li {
+    counter-increment: css-counter 1; /* Increase the counter by 1. */
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 25%;
+    width: 1050px;
+    word-break: break-all;
+}
+
+.question-ul li:before {
+    content: counter(css-counter) ". "; /* Apply counter before children's content. */
+}
+
+.create-question {
+    position: relative;
+    top: -200px;
+    left: 238px;
+    width: 100%;
 }

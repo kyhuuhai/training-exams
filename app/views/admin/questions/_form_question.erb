@@ -1,0 +1,15 @@
+<div class="col-lg-12">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-1">
+      <div class="panel panel-default">
+        <%= form_for(@question, url: admin_exam_questions_path) do |f| %>
+          <div class="form-group">
+            <%= f.label 'question' %>
+            <%= f.text_area :content, placeholder: "create question",required: true, class: 'form-control'%>
+          </div>
+          <%= f.submit 'Submit', class: 'btn btn-success' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
