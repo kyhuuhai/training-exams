@@ -8,3 +8,5 @@ model:
 help:
   user:
     avatar_size: 80
+paginate:
+  manage: 6

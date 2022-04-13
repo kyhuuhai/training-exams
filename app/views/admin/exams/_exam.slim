@@ -1,0 +1,18 @@
+tr
+  td
+    = exam.name
+  td
+    = exam.pass_score
+  td
+    = exam.time_limit
+  td
+    = link_to admin_exam_path(exam.id) ,class: "btn btn-primary btn-exam" do
+      i.fa.fa-expand aria-hidden="true"
+        = t(".btn_detail")
+    = link_to edit_admin_exam_path(exam.id), class: "btn btn-primary btn-exam" do
+      i.fa.fa-pencil-square-o aria-hidden="true"
+        = t(".btn_edit")
+    = link_to admin_exam_path(exam.id), method: :delete,
+        data: { confirm: t(".confirm_delete") }, class: "btn btn-danger btn-exam" do
+      i.fa.fa-trash-o aria-hidden="true"
+        = t(".btn_delete")

@@ -26,7 +26,6 @@ textarea {
 
 /* typography */
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -42,7 +41,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -307,4 +306,54 @@ input {
 
 #session_remember_me {
   margin-left: -186px;
+}
+
+.btn-exam {
+  margin: 0 6px;
+}
+
+.exam-show {
+  position: relative;
+  top: -274px;
+  width: 80%;
+  height: 25%;
+  .name-exam {
+    line-height: 50px;
+    font-size: 50px;
+  }
+  .btn-create-question {
+    position: relative;
+    top: 15px;
+  }
+}
+
+.view-question {
+  border: 1px solid rgb(230, 222, 222);
+  position: relative;
+  top: -180px;
+  width: 100%;
+}
+.view-question ul {
+  width: 100%;
+}
+
+.question-ul {
+  list-style-type: none;
+  counter-reset: css-counter 0;
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+
+.question-ul li {
+  counter-increment: css-counter 1; /* Increase the counter by 1. */
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 25%;
+  width: 1050px;
+  word-break: break-all;
+}
+
+.question-ul li:before {
+  content: counter(css-counter) ". "; /* Apply counter before children's content. */
 }

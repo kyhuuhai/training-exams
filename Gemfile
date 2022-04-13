@@ -25,7 +25,7 @@ gem "sprockets-rails"
 gem "bootstrap-sass"
 gem "rails-i18n"
 gem "bootstrap-sass"
-gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.5"
+gem "faker"
 
 
 group :development, :test do
