@@ -1,4 +1,7 @@
 .center.jumbotron.exam-show.col-lg-9
+- if logged_in?
+  .hidden.value-time= @exam.time_limit
+  .timer
 .center.col-lg-12.exam-question
   .hidden.value-time= @exam.time_limit
   .timer
