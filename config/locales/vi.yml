@@ -73,6 +73,9 @@ vi:
         title: "Bài Kiểm Tra"
         btn_begin: "Bắt đầu"
         search: "Lỗi :không có dữ liệu"
+      show:
+        login_name: "Vui lòng Đăng Nhập: "
+        login_click: "Kích tại link này"
   shared:
     error:
       title: "Biểu mẫu chứa"

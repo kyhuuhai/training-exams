@@ -1,4 +1,4 @@
-$( document ).on("turbolinks:load" ,function ()
+$( document ).ready( function ()
 {
   document.querySelector( ".btn-finish-exam" ).onclick = function ()
   {
@@ -26,9 +26,9 @@ $( document ).on("turbolinks:load" ,function ()
         length: a.length,
       },
       dataType: 'JSON'
-    }).done( function ( data )
+    } ).done( function ( data )
     {
       alert( "Xem diem cua ban" );
-    })
+    } )
   };
-});
+} );

@@ -3,8 +3,6 @@
   .hidden.value-time= @exam.time_limit
   .timer
 .center.col-lg-12.exam-question
-  .hidden.value-time= @exam.time_limit
-  .timer
   - if logged_in?
     .view-question
       ul.question-ul
@@ -20,6 +18,7 @@
                       input.radio-btn id="#{answer.content}" name="#{question.content}" type="radio" /
                       label for="#{answer.content}" = answer.content
                       br/
+      = link_to "Submit Exam", user_exam_result_exams_path,  class: "btn btn-primary btn-finish-exam", type: "button", data: {id: "#{@exam.id}"}
   - else
     p
       = t(".login_name")

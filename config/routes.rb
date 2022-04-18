@@ -23,8 +23,9 @@ Rails.application.routes.draw do
     end
     namespace :user do
       resources :exams do
+        resources :result_exams
         resources :questions do
-          resources :answers, only: %i(show)
+          resources :answers
         end
       end
     end
