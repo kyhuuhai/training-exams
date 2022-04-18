@@ -12,6 +12,7 @@ class User::ExamsController < ApplicationController
   end
 
   def show
+    params[:exam_time]
     @questions = @exam.questions.order_by_content
     @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_content
   end
