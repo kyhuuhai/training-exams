@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :user_exams, dependent: :destroy
+  has_many :exam_carts
   attr_accessor :remember_token, :reset_token
   validates :name, presence: true,
                    length: { maximum: Settings.model.user.name_length_max }

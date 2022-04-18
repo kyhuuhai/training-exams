@@ -1,12 +1,38 @@
-- provide(:title, @user.name)
-.row
-  aside.col-md-4
-    section.user_info
-      h1
-        = gravatar_for @user
-      h2
-        = @user.name
-      h3
-        = @user.email
-      h4
-        = @user.address
+section#about.section.about-section.gray-bg
+  .container
+    .row.align-items-center.flex-row-reverse
+      .col-lg-6
+        .about-text.go-to
+          h3.dark-color = @user.name
+          h6.theme-color.lead 
+          p
+            | I
+            mark Your Profile:
+            | 
+          .row.about-list
+            .col-md-6
+              .media
+                label E-mail
+                p #{@user.email}
+              .media
+                label Address
+                p #{@user.address}
+              .media
+                label Number of tests 
+                p #{@user_exams.count} 
+              .media
+                label Number of passes
+                p #{@user_exams.where(is_passed: true).count}
+            .col-md-6
+              .media
+                = link_to 'Update Information', edit_user_path(id: @user.id)             
+              .media
+                = link_to "Update Avatar"         
+                .media
+                = link_to "Achivement", achievements_path(user_id: @user.id)                   
+      .col-lg-6
+        .about-avatar
+          = image_tag "anh1.png", width: 300, height: 300
+          
+    
+

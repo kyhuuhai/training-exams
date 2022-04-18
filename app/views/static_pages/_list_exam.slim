@@ -1,38 +1,13 @@
 .mt-4
   .row
+  - @exams.each do |exam|
     .col-md-4
       .card.card-course-item.test-exam
         a href="#"
-          img.card-img-top alt=("KHOA KIEM TRA SQL") src="/assets/anh1.png" /
+          img.card-img-top alt=("KHOA KIEM TRA SQL") src="#{exam.image_exam}" /
         .card-body
           a href="#"
-            h5.card-title Bai Test SQL
-          p.card-text.text Giup on tap noi dung asdasdasdasdasdasdasđáasdáda
+            h5.card-title Bai Test #{exam.name}
+          p.card-text.text Giup on tap noi dung #{exam.name}
           a.btn.btn-primary href="#"  Bat Dau
-    .col-md-4
-      .card.card-course-item.test-exam
-        a href="#"
-          img.card-img-top alt=("KHOA KIEM TRA RUBY") src="/assets/anh2.jpeg" /
-        .card-body
-          a href="#"
-            h5.card-title Bai Test RUBY
-          p.card-text.text Giup on tap noi dung SQLádádasdasdasd
-          a.btn.btn-primary href="#"  Bat Dau
-    .col-md-4
-      .card.card-course-item.test-exam
-        a href="#"
-          img.card-img-top alt=("KHOA KIEM TRA SQL") src="/assets/anh3.jpeg" /
-        .card-body
-          a href="#"
-            h5.card-title Bai Test Rails
-          p.card-text.text Giup on tap noi dung SQLádádasdasdasd
-          a.btn.btn-primary href="#"  Bat Dau
-    .col-md-4
-      .card.card-course-item.test-exam
-        a href="#"
-          img.card-img-top alt=("KHOA KIEM TRA SQL") src="#" /
-        .card-body
-          a href="#"
-            h5.card-title Bai Test RUBY
-          p.card-text.text Giup on tap noi dung SQLádádasdasdasd
-          a.btn.btn-primary href="#"  Bat Dau
+   
