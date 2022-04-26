@@ -1,16 +1,17 @@
 - provide :title, t("users.exams.index.title")
 .col-lg-9
-  h1.center = t"users.exams.index.h1_html"
+  h1.center
+    = t"users.exams.index.h1_html"
   table.table.border-bodered.table-manager
     thead
       tr
-        th scope="col"
+        th scope="col" 
           = t"users.exams.index.name"
-        th scope="col"
+        th scope="col" 
           = t"users.exams.index.score"
-        th scope="col"
+        th scope="col" 
           = t"users.exams.index.time"
-        th scope="col"
+        th scope="col" 
           = t"users.exams.index.func"
       - @exams.each do |exam|
         tr
@@ -21,6 +22,4 @@
           td
             = exam.time_limit
           td
-            = link_to t("users.exams.index.btn_begin"), user_exam_path(exam.id), class: "btn btn-primary btn-exam btn-exam-time"
-  .center
-    = will_paginate @exams
+            = link_to t("users.exams.index.btn_begin"), user_exam_path(exam.id), class: "btn btn-primary btn-exam btn-exam-time", type: "button", data: {id: "#{exam.id}", time_limit: "#{exam.time_limit}"}

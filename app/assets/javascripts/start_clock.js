@@ -63,8 +63,9 @@ $( document ).on("turbolinks:load" ,function ()
         this.remainingSeconds--;
         this.updateInterfaceTime();
 
-        if (this.remainingSeconds === 0) {
-          alert('Time Out');
+        if ( this.remainingSeconds === 0 )
+        {
+          alert( 'Time Out' );
           // location.reload();
           this.stop();
         }
@@ -97,7 +98,6 @@ $( document ).on("turbolinks:load" ,function ()
       `;
     }
   }
-
   new Timer(
     document.querySelector( ".timer" )
   );

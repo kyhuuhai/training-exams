@@ -72,6 +72,9 @@ en:
         title: "Exams"
         btn_begin: "Do Exam"
         search: "Error : No data"
+      show:
+        login_name: "Please Login: "
+        login_click: "Click on here"
   shared:
     error:
       title: "The form contains"
