@@ -76,6 +76,25 @@ p {
     }
 }
 
+ul.nav.navbar-nav.navbar-right a {
+  position: relative;
+  font-weight: bold;
+}
+
+ul.nav.navbar-nav.navbar-right a:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 1.5px;
+  width: 0;
+  left: 10%;
+  top: 35px;
+  transition: 0.6s;
+}
+
+ul.nav.navbar-nav.navbar-right a:hover:after {
+  width: 80%;
+}
 /* footer */
 
 footer {
@@ -354,10 +373,7 @@ input {
 }
 
 .gravatar_edit {
-    margin-top: -50px;
-    width: 200px;
-    height: 100px;
-    margin-left: 220px;
+    margin-left: 140px;
 }
 
 .update_user {
@@ -583,6 +599,23 @@ input.delete_user {
     padding: 6px 0px;
     width: 79px;
 }
+.detail_user {
+    float: right;
+    width: 100px;
+}
+
+input.detail_user {
+    height: 37px;
+    background-color: rgb(30, 226, 46);
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 6px;
+    border-radius: 38px;
+    padding: 6px 0px;
+    width: 79px;
+    margin-right: 15px;
+}
 // search
 .form-search.pub {
     float: right;
@@ -623,8 +656,8 @@ input.button--search:hover {
     height: 50%;
     .avatar-user {
         margin-left: 70px;
-        width: 100%;
-        height: 90%;
+        width: 160px;
+        height: 160px;
         border-radius: 20px;
         }
 }
@@ -639,11 +672,12 @@ input.button--search:hover {
     display: inline-block;
     padding: 24px 32px;
     border-radius: 30px;
-    background: white;
-    margin-top: 64px;
-    margin-left: 48%;
+    background: #e1efea;
+    margin-top: 70px;
+    margin-left: 40%;
     z-index: 2;
     box-shadow: 5px 5px 5px lightblue;
+    position: fixed;
 }
 
 .timer__part {
@@ -816,7 +850,8 @@ h1.header__left-name {
     img {
         width: 50px;
         height: 50px;
-        border-radius: none;
+        float: left;
+        margin-right: 20px;
     }
 }
 .marque{
@@ -854,4 +889,20 @@ h1.header__left-name {
     input.btn.btn-primary.btn_submit {
         width: 430px;
     }
+}
+.avatar_profile{
+  img.avatar-user {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+  }
+}
+nav {
+    .pagination{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25%;
+    }
+
 }

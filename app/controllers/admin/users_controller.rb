@@ -1,9 +1,12 @@
 class Admin::UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :destroy]
-  before_action :load_user, only: [:destroy]
+  before_action :load_user, only: [:destroy, :show]
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 7)
+    @users = User.all.paginate(page: params[:page], per_page: 7)
+  end
+
+  def show
   end
 
   def destroy
