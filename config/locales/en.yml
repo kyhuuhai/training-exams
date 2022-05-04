@@ -24,6 +24,7 @@ en:
       delete_answer_fail: "Delete Answer Fail"
       load_answer_fail: "Answer not found"
       load_resources_fail: "Exam and Question not found. Please check data"
+      load_history_exam_fail: "History Exam not found"
   layouts:
     footer:
       english: English
@@ -76,6 +77,15 @@ en:
       show:
         login_name: "Please Login: "
         login_click: "Click on here"
+    history_do_exams:
+      show:
+        title: "History Exam"
+        h1_html: "History Exam"
+        name: "Test name"
+        score: "Pass Score"
+        time: "Exam Time"
+        is_correct_answer: "Number Of Correct Sentences"
+        time_finish: "Time Finish"
   shared:
     error:
       title: "The form contains"
@@ -157,3 +167,15 @@ en:
         label_ans: "Answer :"
         placeholder: "please edit answer..."
         btn_submit: "Update Answer"
+  user:
+    exams:
+      show:
+        btn_submit: "Submit"
+        login_name: "Please Login : "
+        login_click: "Click on here"
+      header_show:
+        created_at: " Created At:"
+        time_limit: "Time Limit (minutes):"
+        pass_score: "Pass Score:"
+      index:
+        btn_submit: "Start"

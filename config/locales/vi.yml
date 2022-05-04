@@ -24,6 +24,7 @@ vi:
       delete_answer_fail: "Xóa câu trả lời không thành công"
       load_answer_fail: "Không tìm thấy câu trả lời"
       load_resources_fail: "Bài kiểm tra và câu hỏi không được tìm thấy. Vui lòng kiểm tra lại"
+      load_history_exam_fail: "Không tìm thấy lịch sử  làm bài kiểm tra"
   layouts:
     footer:
       english: "English"
@@ -77,6 +78,15 @@ vi:
       show:
         login_name: "Vui lòng Đăng Nhập: "
         login_click: "Kích tại link này"
+    history_do_exams:
+      show:
+        title: "Lịch Sử Bài Kiểm Tra"
+        h1_html: "Lịch Sử Bài Kiểm Tra"
+        name: "Tên Bài Kiểm Tra"
+        score: "Điểm Vượt Qua"
+        time: "Thời Gian Làm Bài"
+        is_correct_answer: "Số Câu Đúng"
+        time_finish: "Thời gian nộp bài"
   shared:
     error:
       title: "Biểu mẫu chứa"
@@ -157,3 +167,15 @@ vi:
         label_ans: "Câu Trả Lời :"
         placeholder: "Vui lòng nhập câ trả lời..."
         btn_submit: "Cập Nhật Câu Trả Lời"
+  user:
+    exams:
+      show:
+        btn_submit: "Nộp Bài"
+        login_name: "VUi lòng Đăng Nhập : "
+        login_click: "Kích tại link này"
+      header_show:
+        created_at: " Thời Gian Tạo:"
+        time_limit: "Thời gian giới hạn (phút):"
+        pass_score: "Điểm vượt qua:"
+      index:
+        btn_submit: "Bắt Đầu"
