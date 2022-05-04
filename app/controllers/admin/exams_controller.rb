@@ -10,8 +10,8 @@ class Admin::ExamsController < ApplicationController
   end
 
   def show
-    @questions = Question.includes(:exam).where(exam_id: @exam.id).order_by_content
-    @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_content
+    @questions = Question.includes(:exam).where(exam_id: @exam.id).order_by_id
+    @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_id
   end
 
   def create
@@ -50,7 +50,7 @@ class Admin::ExamsController < ApplicationController
 
   def exam_params
     params.require(:exam).permit :name, :pass_score, :time_limit,
-                                  image_attributes: [:id, :image_url, :imageable, :_destroy]
+                                 image_attributes: [:id, :image_url, :imageable, :_destroy]
   end
 
   def load_exam

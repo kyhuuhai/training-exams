@@ -1,5 +1,5 @@
 class User::ExamsController < ApplicationController
-  before_action :load_exam, only: %i( show result_exam)
+  before_action :load_exam, only: %i( show result_exam )
 
   def new
   end

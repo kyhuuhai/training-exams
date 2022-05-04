@@ -1,24 +1,22 @@
-.center.jumbotron.exam-show.col-lg-9
-- if logged_in?
+= render partial: "header_show"
+.center.col-lg-12.exam-question
   .hidden.value-time= @exam.time_limit
   .timer
-.center.col-lg-12.exam-question
   - if logged_in?
     .view-question
       ul.question-ul
         - @questions.each do |question|
           .form-question
             li.question-li
-              span
               b= question.content
               ul.answer-ul
                 - @answers.each do |answer|
                   - if answer.question_id == question.id
                     li.answer-user-li
-                      input.radio-btn id="#{answer.content}" name="#{question.content}" type="radio" /
+                      input.radio-btn id="#{answer.content}" name="#{question.id}" type="radio" /
                       label for="#{answer.content}" = answer.content
                       br/
-      = link_to "Submit Exam", "#",  class: "btn btn-primary btn-finish-exam", type: "button", data: {id: "#{@exam.id}"}
+      = button_tag t(".btn_submit"), class: "btn btn-primary btn-finish-exam", type: "button", data: {id: "#{@exam.id}"}
   - else
     p
       = t(".login_name")

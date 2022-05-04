@@ -1,0 +1,15 @@
+.center.jumbotron.exam-show.col-lg-9
+  .center.name-exam
+    = @exam.name
+  .row
+    i.fa.fa-calendar aria-hidden="true" 
+      = t".created_at"
+      = @exam.created_at
+    h5
+      i.fa.fa-star aria-hidden="true" 
+        = t(".pass_score")
+        = @exam.pass_score
+    h5
+      i.fa.fa-clock-o aria-hidden="true" 
+        = t(".time_limit")
+        = @exam.time_limit
