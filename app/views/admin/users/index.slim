@@ -3,8 +3,7 @@ h1 All users
 ul.users
   - @users.each do |user|
     li
-      .logo_user
-          = gravatar_for user, size:50
+      = gravatar_for user, size:50
       .ten_user
           = link_to user.name, user
       .email_user

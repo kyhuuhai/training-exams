@@ -1,5 +1,5 @@
 class User::ExamsController < ApplicationController
-  before_action :load_exam, only: %i( show result_exam)
+  before_action :load_exam, only: %i( show )
 
   def new
   end
@@ -14,6 +14,9 @@ class User::ExamsController < ApplicationController
   def show
     @questions = @exam.questions.order_by_content
     @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_content
+  end
+
+  def result_exams
   end
 
   private

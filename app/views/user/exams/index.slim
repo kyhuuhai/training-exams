@@ -22,4 +22,6 @@
           td
             = exam.time_limit
           td
-            = link_to "Begin", user_exam_path(exam.id), class: "btn btn-primary btn-exam btn-exam-time", type: "button", data: {id: "#{exam.id}", time_limit: "#{exam.time_limit}"}
+            = link_to t("users.exams.index.btn_begin"), user_exam_path(exam.id), class: "btn btn-primary btn-exam btn-exam-time"
+  .center
+    = will_paginate @exams

@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     concern :imageable do
       resources :images, only: :create
     end
-
     resources :users, concerns: [:imageable]
     resources :users
     namespace :admin do
@@ -25,10 +24,12 @@ Rails.application.routes.draw do
       resources :exams do
         resources :result_exams
         resources :questions do
-          resources :answers
+          resources :answers, only: %i(show)
         end
       end
     end
+    resources :achievements, only: [:index]
+    resources :account_activations, only:[:edit]
     resources :password_resets
   end
 end

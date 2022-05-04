@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :show]
-
+  
   def new
     @user = User.new
   end
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user_exams = @user.user_exams.includes(:exam) # fix N+1
   end
 
   def create
@@ -57,7 +58,7 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
 end
