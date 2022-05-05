@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user_exams = @user.user_exams.includes(:exam)
   end
 
   def create

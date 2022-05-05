@@ -1,0 +1,37 @@
+.px-4.px-lg-0
+  .container.text-white.py-5.text-center
+    h1.display-4 Statistic Exam
+  .pb-5
+    .container
+      .row
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th.border-0.bg-light scope="col" 
+                    .p-2.px-3.text-uppercase Ten Bai Thi
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase So lan thi
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase Diem Thap nhat
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase Diem cao nhat
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase Diem Trung binh
+              tbody
+              - @exams.each do |exam|
+                tr
+                  th.border-0 scope="row" 
+                    .p-2 
+                      .ml-3.d-inline-block.align-middle
+                        h5.mb-0
+                          a.text-dark.d-inline-block.align-middle href="#" = exam.name
+                  td.border-0.align-middle
+                    strong = UserExam.where(exam_id: exam.id).count 
+                    a.text-dark.d-inline-block.align-middle href="historys?exam_id=#{exam.id}" = " (Xem chi tiet)"
+                  td.border-0.align-middle
+                    strong = UserExam.where(exam_id: exam.id).minimum(:total_score)
+                  td.border-0.align-middle
+                    strong = UserExam.where(exam_id: exam.id).maximum(:total_score)
+                  td.border-0.align-middle
+                    strong = UserExam.where(exam_id: exam.id).average(:total_score)
