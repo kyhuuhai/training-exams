@@ -1,0 +1,6 @@
+- @user ||= current_user
+.stats
+  a href="#{selecting_user_path(@user)}" 
+    h3#selecting.stat
+      = @exam_cart.count
+    | selecting

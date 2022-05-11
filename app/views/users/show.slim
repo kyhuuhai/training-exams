@@ -19,8 +19,9 @@
           | NAME
         p= @user.name
         h3
-          | NGÀY SINH
-        p 15/03/2002
+          = link_to 'Xem thành tích cá nhân'
+        section.stats
+          = render 'shared/stats'
       .information_left
         h3
           | EMAIL
@@ -31,7 +32,7 @@
       .information_right
         h3
           | SỐ LẦN TEST
-        p= 0
+        p #{@user_exams.count}
         h3
           | SỐ LẦN ĐẬU
-        p 0
+        p #{@user_exams.where(is_passed: true).count}

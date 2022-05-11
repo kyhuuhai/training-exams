@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {locale: I18n.locale}
   end
+
+  def correct_user
+    @user = User.find_by(id: params[:id])
+  end
 end

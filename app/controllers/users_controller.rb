@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :show]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :selecting]
+  before_action :correct_user, only: [:edit, :update, :show, :selecting]
 
   def new
     @user = User.new
@@ -11,6 +11,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @exam_cart = Examcart.all
+    @user_exams = @user.user_exams.includes(:exam) 
   end
 
   def create
@@ -36,6 +38,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def selecting
+    @title = "Following"
+    @users = @user.selecting.paginate(page: params[:page])
+    render = 'show_select'
+  end
+
   private
 
   def user_params
@@ -54,10 +62,5 @@ class UsersController < ApplicationController
 
   def log_in(user)
     session[:user_id] = user.id
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
   end
 end

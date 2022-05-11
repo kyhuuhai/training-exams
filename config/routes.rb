@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'exams/new'
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
     get "/signup", to: "users#new"
@@ -6,13 +7,15 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-
     concern :imageable do
       resources :images, only: :create
     end
-
     resources :users, concerns: [:imageable]
-    resources :users
+    resources :users do
+      member do
+        get "/selecting", to: "examcarts#selecting"
+      end
+    end
     namespace :admin do
       resources :users
       resources :exams do
@@ -29,6 +32,10 @@ Rails.application.routes.draw do
         end
       end
     end
+    resources :achievements, only: [:index]
+    resources :account_activations, only:[:edit]
     resources :password_resets
+    resources :examcarts, only: [:show_select, :create, :destroy]
+    resources :static_pages, only: [:create, :destroy]
   end
 end

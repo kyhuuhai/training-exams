@@ -1,0 +1,36 @@
+.px-4.px-lg-0
+  .container.text-white.py-5.text-center
+    h1.display-4 Exam cart
+  .pb-5
+    .container
+      .row
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th.border-0.bg-light scope="col" 
+                    .p-2.px-3.text-uppercase Exam name
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase Pass score
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase time limit
+                  th.border-0.bg-light scope="col" 
+                    .py-2.text-uppercase Delete
+              tbody
+              - @exam_carts.each do |exam_cart|
+                tr
+                  th.border-0 scope="row" 
+                    .p-2 
+                      .ml-3.d-inline-block.align-middle
+                        h5.mb-0
+                          a.text-dark.d-inline-block.align-middle href="#" = exam_cart.exam.name
+                  td.border-0.align-middle
+                    strong = exam_cart.exam.pass_score
+                  td.border-0.align-middle
+                    strong = exam_cart.exam.time_limit
+                  td.border-0.align-middle
+                    a.text-dark href="#" 
+                      i.fa.fa-trash
+                  td.border-0.align-middle
+                    a.text-dark href="#" 
+                      strong Start
