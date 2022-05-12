@@ -1,0 +1,42 @@
+- provide :title, t("users.history_do_exams.show.title")
+.col-lg-9
+  h1.center
+    = t"users.history_do_exams.show.h1_html"
+  table.table.border-bodered.table-manager
+    thead
+      tr
+        th scope="col"
+          = t("users.history_do_exams.show.name")
+        th scope="col"
+          = t("users.history_do_exams.show.score")
+        th scope="col"
+          = t("users.history_do_exams.show.time")
+        th scope="col"
+          = t("users.history_do_exams.show.time_finish")
+        th scope="col"
+          = t("users.history_do_exams.show.is_correct_answer")
+      tr
+        td
+          = @exam.name
+        td
+          = @exam.pass_score
+        td
+          = @exam.time_limit
+        td
+          = @minutes.to_s + ":" + @seconds.to_s
+        td
+          = @is_true
+.center.col-lg-12.exam-question-history
+  .view-question
+    ul.question-history-ul
+      - @history_exams.each do |history|
+        .form-question-history
+          li.question-history-li
+            span.question-content
+              = history.question.content
+            .question-answer
+              - history.question.answers.each do |answer|
+                - if answer.is_correct_answer == true && answer.content === history.answer
+                  span.answer-true-check= answer.content
+                - if answer.is_correct_answer == false && answer.content === history.answer
+                  span.answer-false-check= history.answer

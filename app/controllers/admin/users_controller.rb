@@ -26,6 +26,7 @@ class Admin::UsersController < ApplicationController
   def load_user
     @user = User.find_by(id: params[:id])
     return if @user.present?
+
     flash[:danger] = "khong tim thay user"
     redirect_to root_url
   end

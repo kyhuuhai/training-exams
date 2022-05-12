@@ -1,0 +1,29 @@
+- provide :title, t("users.history_do_exams.show.title")
+.col-lg-9
+  h1.center
+    = t"users.history_do_exams.show.h1_html"
+  table.table.border-bodered.table-manager
+    thead
+      tr
+        th scope="col"
+          = t("users.history_do_exams.show.name")
+        th scope="col"
+          = t("users.history_do_exams.show.name_user")
+        th scope="col"
+          = t("users.history_do_exams.show.time_finish")
+        th scope="col"
+          = t("users.history_do_exams.show.is_correct_answer")
+        th scope="col"
+          = t("users.history_do_exams.show.submit_time")
+      - @user_exams.each do |user_exam|
+        tr
+          td
+            = user_exam.exam.name
+          td
+            = user_exam.user.name
+          td
+            = user_exam.completed_time
+          td
+            = user_exam.total_score
+          td
+            = user_exam.created_at

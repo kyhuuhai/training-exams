@@ -56,7 +56,7 @@ class Admin::QuestionsController < ApplicationController
 
   def load_question
     @question = Question.find_by(id: params[:id])
-    return if @question
+    return if @question.present?
 
     flash[:warning] = t "controller.admin.load_question_fail"
     redirect_to root_path

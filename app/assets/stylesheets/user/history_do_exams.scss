@@ -1,0 +1,39 @@
+// Place all the styles related to the user/history_do_exams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.question-history-ul {
+  list-style-type: none;
+  counter-reset: css-counter 0;
+  float: left;
+  text-align: left;
+  width: 100%;
+  height: 75%;
+  padding: 0px 24px;
+  .question-history-li {
+    height: 75%;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0 12px;
+    width: 95%;
+    counter-increment: css-counter 1;
+    word-break: break-word;
+    &:before {
+      content: counter(css-counter) ". "; /* Apply counter before children's content. */
+    }
+  }
+  .form-question-history {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    border: 1px solid #b4adad;
+    border-radius: 4px;
+    width: 100%;
+    height: 75%;
+    margin-bottom: 24px;
+    &:first-child {
+      margin-top: 12px;
+    }
+  }
+}

@@ -1,7 +1,6 @@
-$( document ).on("turbolinks:load" ,function ()
+$( document ).on( "turbolinks:load", function ()
 {
   z = parseInt( document.querySelector( '.value-time' ).innerHTML );
-  console.log( parseInt( z ) );
   class Timer
   {
     constructor ( root )
@@ -17,6 +16,7 @@ $( document ).on("turbolinks:load" ,function ()
 
       this.interval = null;
       this.remainingSeconds = z * 60;
+      // this.remainingSeconds = 15;
 
       this.el.reset.addEventListener( "click", () =>
       {
@@ -65,8 +65,10 @@ $( document ).on("turbolinks:load" ,function ()
 
         if ( this.remainingSeconds === 0 )
         {
-          alert( 'Time Out' );
-          // location.reload();
+          $( document ).ready( function ()
+          {
+            $( ".btn-finish-exam" ).click();
+          } );
           this.stop();
         }
       }, 1000 );
@@ -101,4 +103,4 @@ $( document ).on("turbolinks:load" ,function ()
   new Timer(
     document.querySelector( ".timer" )
   );
-});
+} );

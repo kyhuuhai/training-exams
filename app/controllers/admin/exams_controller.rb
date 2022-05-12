@@ -10,8 +10,8 @@ class Admin::ExamsController < ApplicationController
   end
 
   def show
-    @questions = Question.includes(:exam).where(exam_id: @exam.id).order_by_content
-    @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_content
+    @questions = Question.includes(:exam).where(exam_id: @exam.id).order_by_id
+    @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_id
   end
 
   def create
@@ -55,7 +55,8 @@ class Admin::ExamsController < ApplicationController
 
   def load_exam
     @exam = Exam.find_by id: params[:id]
-    return if @exam
+    return if @exam.present?
+
     flash[:warning] = t "controller.admin.load_exam_fail"
     redirect_to admin_exams_path
   end

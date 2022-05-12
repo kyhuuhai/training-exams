@@ -24,7 +24,7 @@ class User::ExamsController < ApplicationController
 
   def load_exam
     @exam = Exam.find_by id: params[:id]
-    return if @exam
+    return if @exam.present?
 
     flash[:warning] = t "controller.admin.load_exam_fail"
     redirect_to admin_exams_path
