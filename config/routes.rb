@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     namespace :user do
       resources :exams do
         resources :result_exams
+        resources :history_do_exams
         resources :questions do
           resources :answers
         end

@@ -1,0 +1,41 @@
+<% provide :title, t("users.exams.index.title")
+ %>
+<div class="col-lg-9">
+  <h1 class="center"><%= t"users.exams.index.h1_html" %>
+  </h1>
+  <table class="table border-bodered table-manager">
+    <thead>
+      <tr>
+        <th scope="col">
+          <%= t"users.exams.index.name" %>
+        </th>
+        <th scope="col">
+          <%= t"users.exams.index.score" %>
+        </th>
+        <th scope="col">
+          <%= t"users.exams.index.time" %>
+        </th>
+        <th scope="col">
+          <%= t"users.exams.index.func" %>
+        </th>
+      </tr>
+      <% @exams.each do |exam|%>
+        <tr>
+          <td>
+            <%= exam.name %>
+          </td>
+          <td>
+            <%= exam.pass_score %>
+          </td>
+          <td>
+            <%= exam.time_limit %>
+          </td>
+          <td>
+            <%= link_to "batdau", user_exam_path(exam.id), class: "btn btn-primary btn-exam btn-exam-time", type: "button", data: {id: "#{exam.id}", time_limit: "#{exam.time_limit}"}%>
+          </td>
+        </tr>
+      <% end %>
+    </thead>
+  </table>
+</div>
+<%# user_exam_path(exam.id) %>

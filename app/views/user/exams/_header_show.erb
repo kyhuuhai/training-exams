@@ -1,0 +1,22 @@
+<div class="center jumbotron exam-show col-lg-9">
+  <div class="center name-exam">
+    <%= @exam.name %>
+  </div>
+  <div class="row">
+    <i aria-hidden="true" class="fa fa-calendar">
+      <%= t".created_at" %>
+      <%= @exam.created_at %>
+    </i>
+    <h5>
+      <i aria-hidden="true" class="fa fa-star">
+        <%= t(".pass_score") %>
+        <%= @exam.pass_score %>
+      </i></h5>
+    <h5>
+      <i aria-hidden="true" class="fa fa-clock-o">
+        <%= t(".time_limit") %>
+        <%= @exam.time_limit %>
+      </i>
+    </h5>
+  </div>
+</div>

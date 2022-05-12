@@ -1,4 +1,4 @@
-$( document ).on("turbolinks:load" ,function ()
+$( document ).on( "turbolinks:load", function ()
 {
   z = parseInt( document.querySelector( '.value-time' ).innerHTML );
   console.log( parseInt( z ) );
@@ -101,4 +101,4 @@ $( document ).on("turbolinks:load" ,function ()
   new Timer(
     document.querySelector( ".timer" )
   );
-});
+} );

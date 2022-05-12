@@ -1,0 +1,62 @@
+<% provide :title, t("users.history_do_exams.show.title")%>
+<div class="col-lg-9">
+  <h1 class="center"><%= t"users.history_do_exams.show.h1_html" %>
+  </h1>
+  <table class="table border-bodered table-manager">
+    <thead>
+      <tr>
+        <th scope="col">
+          <%= t("users.history_do_exams.show.name") %>
+        </th>
+        <th scope="col">
+          <%= t("users.history_do_exams.show.score") %>
+        </th>
+        <th scope="col">
+          <%= t("users.history_do_exams.show.time") %>
+        </th>
+        <th scope="col">
+          <%= t("users.history_do_exams.show.is_correct_answer")%>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <%= @exam.name %>
+        </td>
+        <td>
+          <%= @exam.pass_score %>
+        </td>
+        <td>
+          <%= @exam.time_limit %>
+        </td>
+        <td>
+          <%= @is_true %>
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>
+<div class="center col-lg-12 exam-question-history">
+  <div class="view-question">
+    <ul class="question-history-ul">
+      <% @history_exams.each do |history| %>
+        <div class="form-question-history">
+          <li class="question-history-li">
+            <span class="question-content">
+              <%= history.question.content %>
+            </span>
+            <div class="question-answer">
+              <% history.question.answers.each do |answer| %>
+                <% if answer.is_correct_answer == true && answer.content === history.answer %>
+                  <span class="answer-true-check"><%= answer.content %></span>
+                <% end %>
+                <% if answer.is_correct_answer == false && answer.content === history.answer %>
+                  <span class="answer-false-check"><%= history.answer %></span>
+                <% end %>
+              <% end %>
+            </div>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+</div>

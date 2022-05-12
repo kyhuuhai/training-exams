@@ -376,6 +376,9 @@ input {
     border-radius: 8px;
     position: relative;
     top: -120px;
+    .btn-finish-exam {
+        margin-bottom: 3%;
+    }
 }
 .view-question {
     position: relative;
@@ -616,17 +619,27 @@ input.button--search:hover {
     color: red;
     text-align: center;
 }
-.avatar_edit {
+.form-profile {
+    width: 55%;
     position: relative;
-    margin: 15px 70px;
-    width: 50%;
-    height: 50%;
+    height: 100%;
+    h1 {
+        position: relative;
+        font-size: 50px;
+        font-weight: bold;
+        right: 20%;
+    }
+    .avatar_edit {
+        // position: absolute;
+        margin: 10% 20%;
+        width: 50%;
+        height: 50%;
+    }
     .avatar-user {
-        margin-left: 70px;
-        width: 100%;
-        height: 90%;
+        width: 50%;
+        height: 50%;
         border-radius: 20px;
-        }
+    }
 }
 
 .avatar-exam {
@@ -634,6 +647,7 @@ input.button--search:hover {
     height: 50px;
 }
 
+/*timer*/
 .timer {
     font-family: sans-serif;
     display: inline-block;
@@ -673,17 +687,24 @@ input.button--search:hover {
 li.answer-user-li {
     list-style: none;
     display: flex;
-
+    float: left;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
+    height: 100%;
+    word-break: break-word;
     input.radio-btn {
         padding: 10px;
         margin-right: 10px;
         width: 3%;
-        margin-top: 8px;
+        margin-top: -1%;
     }
 }
 //  profile
 .headerr {
-    background-image: linear-gradient(to right bottom,rgba(71, 233, 22, 0.7),rgba(48, 185, 219, 0.3));
+    background-image: linear-gradient(to right bottom, rgba(71, 233, 22, 0.7), rgba(48, 185, 219, 0.3));
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -721,27 +742,27 @@ h1.header__left-name {
     font-size: 30px;
     float: left;
     margin-left: 130px;
-        i.fa.fa-facebook{
+    i.fa.fa-facebook {
         color: #0066cc;
         display: flex;
         margin-left: 5px;
-        }
+    }
 
-        i.fa.fa-gitlab{
-            color: #e63f15;
-            display: flex;
-        }
-        i.fa.fa-twitter {
-            color: blue;
-            display: flex;
-            margin-left: 1px;
-        }
+    i.fa.fa-gitlab {
+        color: #e63f15;
+        display: flex;
+    }
+    i.fa.fa-twitter {
+        color: blue;
+        display: flex;
+        margin-left: 1px;
+    }
 
-        i.fa.fa-github {
-            color: deeppink;
-            display: flex;
-            margin-left: 2px;
-        }
+    i.fa.fa-github {
+        color: deeppink;
+        display: flex;
+        margin-left: 2px;
+    }
 }
 .header__left-icon a {
     text-decoration: none;
@@ -756,21 +777,22 @@ h1.header__left-name {
     width: 40px;
     height: 40px;
     text-align: center;
-    box-shadow: 0px 5px 5px 1px ;
+    box-shadow: 0px 5px 5px 1px;
     animation: scaleIcon 2s linear infinite;
     margin-left: 35px;
 }
 
-@keyframes scaleIcon{
-    100%{
+@keyframes scaleIcon {
+    100% {
         transform: scale(1.1);
     }
 }
-.fa-brands, .fab {
+.fa-brands,
+.fab {
     font-family: "Font Awesome 6 Brands";
     font-weight: 400;
 }
-.personal_information{
+.personal_information {
     clear: left;
     margin-left: 50px;
 }
@@ -801,39 +823,39 @@ h1.header__left-name {
     float: right;
     width: 170px;
     margin-left: 20px;
-        h3 {
-            color: #2e1313;
-            font-size: 1.7rem;
-            font-weight: bold;
-        }
-        p {
-            color: rgb(48, 44, 44);
-            padding-top: 6px;
-            font-size: 1.7rem;
-        }
+    h3 {
+        color: #2e1313;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    p {
+        color: rgb(48, 44, 44);
+        padding-top: 6px;
+        font-size: 1.7rem;
+    }
 }
-.logo_user{
+.logo_user {
     img {
         width: 50px;
         height: 50px;
         border-radius: none;
     }
 }
-.marque{
+.marque {
     float: left;
     margin: auto;
     width: 35%;
 
     margin-left: 30px;
     margin-top: 15px;
-    a{
+    a {
         color: white;
         font-weight: bold;
         text-decoration: none;
     }
 }
-.edit_profile{
-    background-image: linear-gradient(to right bottom,rgba(116, 188, 236, 0.7),rgba(48, 185, 219, 0.3));
+.edit_profile {
+    background-image: linear-gradient(to right bottom, rgba(116, 188, 236, 0.7), rgba(48, 185, 219, 0.3));
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -841,11 +863,10 @@ h1.header__left-name {
     height: auto;
     width: 60%;
     margin: 30px 0px 30px 400px;
-
 }
-.update_user{
-    .form-control{
-    width: 430px;
+.update_user {
+    .form-control {
+        width: 430px;
     }
     input#user_image_attributes_image_url {
         margin-left: 115px;
@@ -854,4 +875,18 @@ h1.header__left-name {
     input.btn.btn-primary.btn_submit {
         width: 430px;
     }
+}
+
+.answer-true-check {
+    color: rgb(72, 236, 39);
+}
+
+.answer-false-check {
+    color: red;
+}
+
+.exam-question-history {
+    background-color: #eee;
+    border-radius: 8px;
+    position: relative;
 }
