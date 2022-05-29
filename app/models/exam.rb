@@ -15,9 +15,7 @@ class Exam < ApplicationRecord
 
   scope :order_by_name, ->{order :name}
 
-  def self.search(name)
-      where('name LIKE ?', "%#{name}%")
-  end
+  scope :search_exam, ->(name) { where("name LIKE ?", "%#{name}%") if name.present? }
 
   def add_question question
     questions << question

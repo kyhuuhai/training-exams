@@ -20,3 +20,5 @@ table.table.border-bodered.table-manager
         td
           = link_to user_exam_path(exam.id),class: "btn btn-primary btn-exam btn-exam-time" do
             = t("users.exams.index.btn_begin")
+.center
+    = will_paginate @exams

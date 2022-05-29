@@ -18,11 +18,10 @@
         th scope="col"
           = t".func"
     tbody
+      = render "search"
       - if @exams.length > 0
-          = render "search"
           = render @exams
       - else
-          = render "search"
           p.error_search = t"users.exams.index.search"
   .center
     = will_paginate @exams
