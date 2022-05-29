@@ -27,4 +27,3 @@ config/database.yml
 /test/*
 .byebug_history
 /public/uploads
-/db/seeds
